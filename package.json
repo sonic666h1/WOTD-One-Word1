@@ -1,0 +1,21 @@
+{
+  "name": "wotdoneword",
+  "version": "1.0.0",
+  "description": "One Word WOTD",
+  "main": "bot.js",
+  "scripts": {
+    "test": "WOTD",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "1WOTD"
+  ],
+  "author": "sonic666h",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
