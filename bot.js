@@ -8,13 +8,13 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', async (message) => {
-  if (message.author.bot && message.author.id !== client.user.id) { // Ensure the message is from another bot
+  if (message.author.bot && message.author.id !== client.user.id) { 
     const botId = message.author.id;
     const channel = message.channel;
     
     try {
-      const messages = await channel.messages.fetch({ limit: 10 }); // Fetch the last 10 messages in the channel
-      const botMessages = messages.filter(m => m.author.id === botId && m.id !== message.id); // Filter out the current message
+      const messages = await channel.messages.fetch({ limit: 10 }); 
+      const botMessages = messages.filter(m => m.author.id === botId && m.id !== message.id); 
       
       for (const [id, msg] of botMessages) {
         await msg.delete();
